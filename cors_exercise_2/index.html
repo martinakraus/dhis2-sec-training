@@ -31,18 +31,15 @@
               "Content-Type": "application/json",
               "X-Custom-Header": "hiddenValue",
             },
-            // Bonus: Also include credentials in the request and configure CORS accordingly
-            //credentials: "include",
+            credentials: "include",
             body: JSON.stringify({ username, password }),
           })
             .then((response) => response.json())
             .then((data) => {
               console.log("Success:", data);
-              alert("Login successful!");
             })
             .catch((error) => {
               console.error("Error:", error);
-              alert("Login failed!");
             });
         });
     </script>
