@@ -1,0 +1,23 @@
+{
+    "name": "DHIS@ Security Training",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+          "version": "22" // Node.js Version festlegen
+        }
+      },
+    "postCreateCommand": "bash ./setup.sh", // Skript ausführen, um npm install in Unterordnern zu starten  
+    "extensions": [    
+      "GitHub.github-vscode-theme",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "ritwickdey.LiveServer",
+      "stylelint.vscode-stylelint"
+      // Additional Extensions Here
+    ],
+    "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
+    "postAttachCommand": "git pull --all"
+    
+    // Update welcome text and set terminal prompt to '$ '
+  }
+  // DevContainer Reference: https://code.visualstudio.com/docs/remote/devcontainerjson-reference
+  //node:lts-slim
