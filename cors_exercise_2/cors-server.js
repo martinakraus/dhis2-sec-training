@@ -4,7 +4,10 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-// app.use(cors({}));
+
+// ToDo: configure CORS policy here
+ app.use(cors({}));
+
 const port = 4000;
 
 // Middleware to parse JSON bodies
